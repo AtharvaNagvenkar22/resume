@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#element {
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+}
+
+nav ul li a:hover {
+    color: aqua;
+    font-size: 1.05rem;
+}
+
+body {
+    font-weight: 'popoins', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1,
+header p {
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+main section {
+    margin: 20px 0;
+}
+
+main h2 {
+    margin-bottom: 10px;
+}
+
+main ul {
+    list-style: none;
+}
+
+/* Skills Grid Styles */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-box {
+    flex: 0 1 calc(25% - 10px);
+    /* 4 columns with 10px gap */
+    background: #e4e6e7;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: #333;
+    margin: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .skills-grid {
+        flex-direction: column;
+    }
+
+    .skill-box {
+        flex: 1 1 100%;
+        /* Full width for smaller screens */
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    position: static;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #f0f0f0;
+    animation: bounce 1s;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+    </style>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Atharva Nagvenkar</h1>
+            <span id="element"></span>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="fade-in">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>Hello I'm Atharva Nagvenkar, dedicated fourth-year Computer Engineering student, proficient in a
+                    variety of technologies
+                    and domains , experienced in database management with SQL, and adept in algorithms, including AI and
+                    ML concepts,
+                    through coursework and personal projects. Known for strong problem-solving abilities, meticulous
+                    attention to detail,
+                    and excellence in teamwork, communication, and time management. Eager to apply comprehensive skills
+                    and passion for
+                    computer engineering in a dynamic, growth-oriented company..</p>
+            </div>
+            <hr>
+        </section>
+
+        <section id="experience" class="fade-in">
+            <div class="container">
+                <h2>Experience</h2>
+                <ul>
+                    <li>
+                        <h3>Codanto</h3>
+                        <p>Role: Software Developer Intern</p>
+                        <p>Description: Developed and maintained the frontend of various web applications.</p>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+        </section>
+
+        <section id="education" class="fade-in">
+            <div class="container">
+                <h2>Education</h2>
+                <ul>
+                    <li>
+                        <h3>Goa University</h3>
+                        <p>Degree: Bachelor of Engineering in Computer Science</p>
+                        <p>Duration: 2021 - Present</p>
+                        <p>Academic Coursework: Object Oriented Programming, Databases, Discrete Mathematics, Data
+                            Structures and Algorithms, Operating Systems,
+                            Computer Networks, Data Mining, Artificial Intelligence (AI),Machine Learning (ML),Data
+                            Warehousing and Mining</p>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+        </section>
+
+        <section id="skills" class="fade-in">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-box">HTML</div>
+                    <div class="skill-box">CSS</div>
+                    <div class="skill-box">JavaScript</div>
+                    <div class="skill-box">React</div>
+                    <div class="skill-box">Node.js</div>
+                    <div class="skill-box">C/C++</div>
+                    <div class="skill-box">Java</div>
+                    <div class="skill-box">Python</div>
+                    <div class="skill-box">WordPress</div>
+                </div>
+            </div>
+            <hr>
+        </section>
+
+        <section id="projects" class="fade-in">
+            <div class="container">
+                <h2>Projects</h2>
+                <ul>
+                    <li>
+                        <h3>Gym Management System</h3>
+                        <p>Description: Built a responsive website using HTML, CSS, and JavaScript.</p>
+                    </li>
+                    <br>
+                    <li>
+                        <h3>Connect 4 Game</h3>
+                        <p>Description: Built a game using python and with the help of AI algorithms like alpha-beta
+                            pruning.</p>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+        </section>
+
+        <section id="contact" class="fade-in">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>Email: atharvanagvenkar34@gmail.com</p>
+                <p>Phone: 9322286215</p>
+            </div>
+            <hr>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Atharva Nagvenkar</p>
+            <p>
+                <a href="https://www.linkedin.com/in/atharvanagvenkar" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/atharva-nagvenkar" target="_blank">GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+                const navLinks = document.querySelectorAll('nav ul li a');
+
+                navLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = link.getAttribute('href').substring(1);
+                        const targetSection = document.getElementById(targetId);
+                        window.scrollTo({
+                            top: targetSection.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+            });
+
+    </script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Content Creator', 'Coder', 'Video Editor'],
+            typeSpeed: 50,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
